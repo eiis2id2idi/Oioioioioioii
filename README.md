@@ -4,45 +4,7 @@
     -- Versão 3.1 - Interface Limpa + Notificações Rápidas
     -- ═══════════════════════════════════════════════════════════
     
-    local HttpService = game:GetService("HttpService")
-    local TeleportService = game:GetService("TeleportService")
-    local TweenService = game:GetService("TweenService")
-    local Players = game:GetService("Players")
-    local RunService = game:GetService("RunService")
-    
-    -- URLs das APIs
-    local url_api1 = table.concat({
-        "https://", "yoidkwhatsthis", ".elijahmoses-j", ".workers.dev",
-        "/api/", "messages"
-    })
-    
-    local url_api2 = table.concat({
-        "https://", "brainrot-finder", "-default-rtdb", ".firebaseio.com",
-        "/brainrots/", "latest.json"
-    })
-    
-    -- Configurações
-    local cfg_gameid = 109983668079237
-    local cfg_lifetime = 15
-    local cfg_maxcards = 3
-    local cfg_interval_api = 1
-    local cfg_interval_local = 0.5
-    local cfg_min_generation = 50
-    
-    -- Variáveis globais
-    local ui_gui, ui_frame
-    local tbl_cards = {}
-    local tbl_seen = {}
-    local last_id = nil
-    local is_busy = false
-    local min_target_value = 0
-    local current_mode = "DETECTING"
-    local http_available = false
-    
-    -- ═══════════════════════════════════════════════════════════
-    -- DETECÇÃO DE PLATAFORMA E CAPACIDADES
-    -- ═══════════════════════════════════════════════════════════
-    
+    local HttpService = game:    
     local function detect_platform()
         local platform = "UNKNOWN"
         local user_input = game:GetService("UserInputService")
